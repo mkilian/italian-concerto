@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.24.0"
 
 rightMvtI = \relative c''
 {
@@ -591,9 +591,9 @@ leftMvtI = \relative c
   <<
     {
       \voiceThree
-      \change Staff=upper \override Stem #'length = #4.8 <d gis>4 <b e> |
+      \change Staff=upper \override Stem.length = #4.8 <d gis>4 <b e> |
       \voiceOne
-      \change Staff=lower \revert Stem #'length <gis b> <e a> |
+      \change Staff=lower \revert Stem.length <gis b> <e a> |
     }
     \\
     {

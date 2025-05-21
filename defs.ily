@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.24.0"
 
 tre = { \clef treble }
 ba = { \clef bass }
@@ -13,14 +13,14 @@ afterGraceFraction = #(cons 15 16)
     \accepts "SoloStaff"
     skipBars = ##t
     extraNatural = ##f
-    \override PaperColumn #'keep-inside-line = ##t
-    \override NonMusicalPaperColumn #'keep-inside-line = ##t
+    \override PaperColumn.keep-inside-line = ##t
+    \override NonMusicalPaperColumn.keep-inside-line = ##t
     autoAccidentals = #`(Staff ,(make-accidental-rule 'same-octave 0)
                                ,(make-accidental-rule 'any-octave 0)
                                ,(make-accidental-rule 'same-octave 1))
-    markFormatter = #format-mark-numbers
-    \override Beam #'breakable = ##t
-    \override NoteCollision #'merge-differently-dotted = ##t
+    rehearsalMarkFormatter = #format-mark-numbers
+    \override Beam.breakable = ##t
+    \override NoteCollision.merge-differently-dotted = ##t
     %tempoHideNote = ##t
   }
 
@@ -33,8 +33,8 @@ afterGraceFraction = #(cons 15 16)
     \alias "Staff"
 
     fontSize = #-3
-    \override StaffSymbol #'staff-space = #(magstep -3)
-    \override RehearsalMark #'font-size = #0
+    \override StaffSymbol.staff-space = #(magstep -3)
+    \override RehearsalMark.font-size = #0
   }
 }
 
@@ -74,13 +74,13 @@ afterGraceFraction = #(cons 15 16)
   bookTitleMarkup = \markup
   \column
   {
-    \vspace #12
+    \combine \null \vspace #12
     \fill-line { \fontsize #10 {\fromproperty #'header:title } }
-    \vspace #2
+    \combine \null \vspace #2
     \fill-line { \fontsize #4 {\fromproperty #'header:composer } }
-    \vspace #2
+    \combine \null \vspace #2
     \fill-line { \fontsize #2 {\fromproperty #'header:opus } }
-    \vspace #5
+    \combine \null \vspace #5
     \fill-line { \fontsize #5 \rounded-box \pad-markup #1.0 {\fromproperty #'header:instrument } }
   }
 
@@ -88,17 +88,17 @@ afterGraceFraction = #(cons 15 16)
   \fill-line
   {
     ""
-    \on-the-fly #not-first-page \rounded-box \pad-markup #0.5 \fromproperty #'header:instrument
+    \unless \on-first-page \rounded-box \pad-markup #0.5 \fromproperty #'header:instrument
     %\override #'(font-name . "Georgia")
-    \on-the-fly #print-page-number-check-first \fromproperty #'page:page-number-string
+    \if \should-print-page-number \fromproperty #'page:page-number-string
   }
 
   evenHeaderMarkup = \markup
   \fill-line
   {
     %\override #'(font-name . "Georgia")
-    \on-the-fly #print-page-number-check-first \fromproperty #'page:page-number-string
-    \on-the-fly #not-first-page \rounded-box \pad-markup #0.5 \fromproperty #'header:instrument
+    \if \should-print-page-number \fromproperty #'page:page-number-string
+    \unless \on-first-page \rounded-box \pad-markup #0.5 \fromproperty #'header:instrument
     ""
   }
 }

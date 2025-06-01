@@ -846,7 +846,7 @@ rightMvtII = \relative c'''
   e32 f ees d ees16 c'~ c32 bes a16~ a32 g f16~ f32 e d e f e d e |
   f, a g f c' bes a ees' d cis d8.~ d32 d, cis d e f g a |
   bes d bes a bes d bes a g fis g8.~ g32 bes g f g e' g, f |
-  g16( bes cis e~) e32 d c d e d c b a16 g32 f g16. e'32 |
+  g16( bes cis e~) e32 d cis d e d cis b a16 g32 f g16. e'32 |
   g,16( f) f'8~ f32 e d e f e d c bes16 a32 g a16. f'32 |
   a,16( g) g'8~ g32 f e f g f e d cis16 bes32 a bes16. g'32 |
   bes,16( a8) cis16~ cis d8 e32 f g a bes a bes16. bes32 |

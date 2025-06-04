@@ -1152,7 +1152,7 @@ rightMvtIII = \relative c''
       a |
       bes4 a g r |
       r e' a,2~ |
-      a4 a~ a <g~ c> |
+      a4 a~ a <g~ cis> |
       g8 a g f g f e f |
     }
   >>

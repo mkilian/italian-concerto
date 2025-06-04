@@ -811,7 +811,7 @@ rightMvtII = \relative c'''
   \key d \minor
   \clef treble
   R2. |
-  R | \break
+  R |
   R |
   a4~\mordent a16 g( f e d cis d) f~ |
   f32 e d16 e8~ e16 g a bes~ bes cis,( d e) |
@@ -1065,7 +1065,7 @@ rightMvtIII = \relative c''
       c1~ |
       c8 e d c e d c d |
       b2~ b4 b |
-      c2 r4 e | \pageBreak
+      c2 r4 e |
       f2. d4 |
       e2. fis4 |
       g1 |
@@ -1128,17 +1128,17 @@ rightMvtIII = \relative c''
   g f g e f e d e |
   f g a4 a, cis |
   d8 d[^\f c bes] a g f e |
-  d e f g a b cis d | \pageBreak
+  d e f g a b cis d |
   e f g e f e d e |
   f d cis b cis d e cis |
   d a g f g a bes a |
   <<
     {
-      % used to be wrapped with repeat unfold 2:
-      r4 <d f> <cis e> <d f> | \break
-      r4 <d f> <cis g'> <d f> |
-      r4 <d f> <cis e> <d f> |
-      r4 <d f> <cis g'> <d f> |
+      \repeat unfold 2
+      {
+        r4 <d f> <cis e> <d f> |
+        r4 <d f> <cis g'> <d f> |
+      }
       <cis e> d cis8 d e f |
       g2~ g8 g f e |
       f4 <d a'> <d f> e8 d |
@@ -1195,7 +1195,6 @@ rightMvtIII = \relative c''
     {\voiceTwo a4}
     \new Voice {\voiceOne r8 d c bes c bes a c |}
   >> \oneVoice
-  \pageBreak
   <<
     \new Voice
     {
@@ -1253,11 +1252,11 @@ rightMvtIII = \relative c''
     {
       d2 d4 c |
       b2 b4 c |
-      r a' gis a | \pageBreak
+      r a' gis a |
       e2. e4 |
       d4 c b2 |
       r8 b4 b8~ b b a gis |
-      a4 <a c e> <a c> b8 a | \break
+      a4 <a c e> <a c> b8 a |
       <a e>4
     }
     \\
@@ -1320,7 +1319,7 @@ rightMvtIII = \relative c''
       a8 c bes a c bes a bes |
       g1~ |
       g8 bes a g bes a g a |
-      f1~ | \pageBreak
+      f1~ |
       f8 a g f a g f g |
       e2. e4 |
       f2 r4 a |

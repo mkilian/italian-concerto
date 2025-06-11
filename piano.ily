@@ -1023,7 +1023,7 @@ rightMvtIII = \relative c''
       c2 c |
       \repeat unfold 4 {r8 f e f r f4 f8 |}
       r8 f4 f8 r f e d |
-      r8 g,4 f8 r g f e |
+      r8 g,4 g8 r g f e |
       f4 c c <bes e> |
       <a c>2
     }

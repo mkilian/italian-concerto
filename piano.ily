@@ -297,7 +297,7 @@ rightMvtI = \relative c''
     {
       a8 f' a, bes |
       c4 d~ |
-      d8 c16 d-. es8 d16 c |
+      d8 c16 d es8 d16 c |
       d4 r |
       r8 g b, c |
       d4 e~ |

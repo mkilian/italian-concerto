@@ -924,7 +924,7 @@ leftTwoMvtII = \relative c'
   cis \ba d, d \tre e' d c |
   d \ba d, d g f e |
   d d, d d'' c bes |
-  c e, e c' bes a |
+  c c, c c' bes a |
   bes bes, bes bes' a g |
   a a, a a' b cis |
   d d, d \tre d' e f |
